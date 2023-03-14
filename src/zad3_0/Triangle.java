@@ -4,7 +4,7 @@ public class Triangle {
     public static void main(String[] args) {
         int N =4;
 
-        pascalTriangle(-1);
+        pascalTriangle(4);
     }
 
     private static void pascalTriangle(int N) {
@@ -15,13 +15,14 @@ public class Triangle {
             for (int line = 1; line <= N; line++) {
                 for (int j = 0; j <= N - line; j++) {
                     //stands for the spacing in our program, if we want to print 4 rows- in the first line there will be 4 spaces as well
-                    System.out.print(" ");
+                    System.out.printf(" ");
                 }
 
-                int k = 1;
+                int n_number = 1;
                 for (int i = 1; i <= line; i++) {
-                    System.out.print(k + " ");
-                    k = k * (line - i) / i;
+//
+                    System.out.printf("%d ", n_number);
+                    n_number = n_number * (line - i) / i;
                 }
 
                 System.out.println();
@@ -29,6 +30,7 @@ public class Triangle {
         }catch (RuntimeException e){
             e.printStackTrace();
     }
+
 
 }
 
